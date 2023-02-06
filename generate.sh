@@ -6,3 +6,5 @@ echo -e "\nGenerating Debug build system:"
 cmake -DCMAKE_C_COMPILER=$compiler -B build/debug   -G "Ninja" -DCMAKE_BUILD_TYPE=Debug   . 
 echo -e "\nGenerating Release build system:"
 cmake -DCMAKE_C_COMPILER=$compiler -B build/release -G "Ninja" -DCMAKE_BUILD_TYPE=Release . 
+
+cp /build/release/compile_commands.json .
