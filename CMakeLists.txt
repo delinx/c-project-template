@@ -12,7 +12,8 @@ project(
   VERSION 0.0.1
   LANGUAGES C)
 
-add_executable(${PROJECT_NAME} src/main.c)
+file(GLOB_RECURSE SRC_FILES src/*.c)
+add_executable(${PROJECT_NAME} ${SRC_FILES})
 
 target_include_directories(${PROJECT_NAME} PRIVATE ${PROJECT_INCLUDE})
 target_link_libraries(${PROJECT_NAME} PRIVATE)
